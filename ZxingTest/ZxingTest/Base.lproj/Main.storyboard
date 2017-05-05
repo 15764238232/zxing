@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RbN-Gd-Cmx">
+                                <rect key="frame" x="16" y="20" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0PW-qR-XUu"/>
+                                    <constraint firstAttribute="width" constant="77" id="8nQ-u5-MKU"/>
+                                </constraints>
+                                <state key="normal" title="生成二维码"/>
+                                <connections>
+                                    <action selector="onClickCreat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Phi-X3-Jcw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBN-up-KFW">
+                                <rect key="frame" x="16" y="66" width="77" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="3gA-WS-QoD"/>
+                                    <constraint firstAttribute="height" constant="30" id="syq-Gp-Kx8"/>
+                                </constraints>
+                                <state key="normal" title="扫描二维码"/>
+                                <connections>
+                                    <action selector="onClickScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aDa-AH-Nhm"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eWN-xg-Ih7">
+                                <rect key="frame" x="67" y="178" width="205" height="205"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="205" id="GeA-7U-VhR"/>
+                                    <constraint firstAttribute="height" constant="205" id="Izr-bp-E0W"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RbN-Gd-Cmx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4Fl-yf-PSP"/>
+                            <constraint firstItem="JBN-up-KFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="MfI-Hb-eQc"/>
+                            <constraint firstItem="eWN-xg-Ih7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="Xye-Lk-bIP"/>
+                            <constraint firstItem="JBN-up-KFW" firstAttribute="top" secondItem="RbN-Gd-Cmx" secondAttribute="bottom" constant="16" id="YpY-QC-pxa"/>
+                            <constraint firstItem="eWN-xg-Ih7" firstAttribute="top" secondItem="JBN-up-KFW" secondAttribute="bottom" constant="82" id="hxt-Hu-O1W"/>
+                            <constraint firstItem="RbN-Gd-Cmx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="uu1-pE-baG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="img" destination="eWN-xg-Ih7" id="rkU-gN-fTL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
